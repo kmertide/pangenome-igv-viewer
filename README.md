@@ -27,7 +27,7 @@ across the GEUVADIS cohort (397 samples), built on IGV.js running inside Jupyter
 Build the conda environment from the provided YAML file (**one-time setup, ~10–15 min**):
 
 ```bash
-conda env create -f /private/groups/patenlab/shared/plotly_dashbio_igv/jupyterlab-nbi-plotly_dashbio-igv.yml
+conda env create -f jupyterlab-nbi-plotly_dashbio-igv.yml
 ```
 
 This creates an environment named `plotly_dashbio_igv`. Verify it installed:
@@ -35,9 +35,6 @@ This creates an environment named `plotly_dashbio_igv`. Verify it installed:
 ```bash
 conda env list
 ```
-
-> You only need to do this once. The YAML file is at:
-> `/private/groups/patenlab/shared/plotly_dashbio_igv/jupyterlab-nbi-plotly_dashbio-igv.yml`
 
 ---
 
@@ -61,7 +58,7 @@ srun --partition=medium \
      --pty bash -c '
   source ~/miniconda3/etc/profile.d/conda.sh
   conda activate plotly_dashbio_igv
-  cd /private/groups/patenlab/shared/plotly_dashbio_igv
+  cd /shared/plotly_dashbio_igv
   jupyter lab --no-browser --ip=0.0.0.0 --port=9191 \
     --ServerApp.token="mytoken123" \
     --ServerApp.password=""
@@ -122,7 +119,6 @@ a few seconds to load the tracks.
 
 ### Navigating to a Locus
 Use the search bar at the top of the IGV panel:
-- Type a gene name: `BRCA2`
 - Type a region: `chr15:50,000,000-51,000,000`
 - Type a chromosome: `chr15`
 
@@ -139,7 +135,6 @@ in the last cell before running:
 ```python
 locus="chr15"                         # whole chromosome view
 locus="chr15:50,000,000-51,000,000"  # specific region
-locus="BRCA2"                         # gene name
 ```
 
 ---
