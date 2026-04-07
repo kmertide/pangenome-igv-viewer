@@ -1,0 +1,53 @@
+# ── Large genomic data files ──────────────────────────────────────────────────
+assets/
+*.fasta
+*.fa
+*.fna
+*.fasta.fai
+*.fa.fai
+*.fasta.gzi
+*.vcf
+*.vcf.gz
+*.vcf.gz.tbi
+*.bcf
+*.bcf.csi
+*.bam
+*.bam.bai
+*.cram
+*.cram.crai
+*.gtf
+*.gtf.bgz
+*.gtf.bgz.tbi
+*.bed
+*.bed.gz
+*.bed.gz.tbi
+*.bedgraph
+
+# ── Generated artifacts ───────────────────────────────────────────────────────
+*.pdf
+igv_viewer_project_summary.pdf
+
+# ── Jupyter ───────────────────────────────────────────────────────────────────
+.ipynb_checkpoints/
+*/.ipynb_checkpoints/
+
+# ── Python ───────────────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+dist/
+build/
+*.so
+
+# ── Conda / environments ──────────────────────────────────────────────────────
+.conda/
+env/
+venv/
+
+# ── OS / editor ──────────────────────────────────────────────────────────────
+.DS_Store
+.idea/
+.vscode/
+*.swp
+*.swo
